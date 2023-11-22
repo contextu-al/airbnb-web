@@ -21,11 +21,31 @@ import { Pagination } from "swiper";
 
 
 const Tab1 = ({ pushDown }) => {
+    window.Contextual.ready(()=>{
+        window.Contextual.registerGuideBlock('pz-nps', (ctx) => {
+            console.log('listen render', ctx);
+            const nps = document.createElement('pz-nps');
+            nps.source = ctx.stepPayload.feedback;
+            nps.addEventListener('afterRender', () => ctx.afterRender());
+            nps.addEventListener('afterShow', () => ctx.afterShow());
+            nps.addEventListener('selectFeedback', (e) =>
+                ctx.sendFeedback(e.detail)
+            );
+            nps.addEventListener('submit', (e) => (ctx.next(), nps.remove()));
 
+            const container = document.querySelector('#customComponent');
+            container.appendChild(nps);
+        });
+    })
 
     return (
         <div>
+
+
+
             <div className='tab1-hold flex justify-center md:mb-48 mb-28 items-center sm:gap-12 gap-0 -mt-16 flex-wrap w-full'>
+                <div id="customComponent" style={{display:'flex', justifyContent:'center'}}></div>
+
                 {placesStore.map((item => {
                     if (item.type === "tropical") {
                         return (
