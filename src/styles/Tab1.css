@@ -1,0 +1,58 @@
+.card {
+    width: 21.6rem;
+    min-height: 23.8rem;
+    border-radius: 8px;
+    height: auto;
+    padding-bottom: 1.7rem;
+}
+
+.cardImg {
+    width: 22rem;
+    height: 13.4rem;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+
+}
+
+
+.heartCrad {
+    background-color: white;
+    width: 2.59rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+    height: 2.5rem;
+    color: blueviolet;
+    position: relative;
+    top: -0.5rem;
+    z-index: 9;
+}
+
+.label {
+    background-color: rgb(89, 43, 226);
+    width: 6rem;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    border-radius: 4px;
+    z-index: 9;
+    position: relative;
+    top: -1rem;
+    height: 1.9rem;
+    left: -0.3rem;
+    /*border-top: 5px solid rgb(238, 21, 21);*/
+    align-items: center;
+    border-left: 6px solid rgb(89, 43, 226);
+}
+
+
+
+.cardsHold {
+    row-gap: 4.1rem;
+    column-gap: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+}
