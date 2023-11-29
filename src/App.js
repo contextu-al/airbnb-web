@@ -10,6 +10,20 @@ import { useState } from 'react';
 import SearchDetails from './components/SearchDetails';
 import SearchPageFooter from './components/SearchPageFooter';
 
+// Init Contextual Web SDK
+let cuid = localStorage.getItem('cuid');
+if(!cuid){
+  cuid = prompt('What is your first name?');
+}
+
+if(cuid){
+  localStorage.setItem('cuid', cuid);
+  window.Contextual.ready(()=>{
+    window.Contextual.register('PZDynamic_zebra', cuid);
+  })
+}else{
+  alert("CUID is required");
+}
 
 function App() {
   const [open, setOpen] = useState(false);

@@ -44,24 +44,10 @@
   To begin the development, run `npm start` or `yarn start`.
   To create a production bundle, use `npm run build` or `yarn build`.
 -->
-
+<script src="%PUBLIC_URL%/pz-nps.es5.js"></script>
+<!--Integrate Contextual Web SDK-->
 <script>
-  !function(e,t){!function(){var e="https://sdks-devgeorge.contextu.al/web/",n=[e+"public/css/streethawk-sdk.css"],r=[e+"dist/bundle/streethawk-pointzi-bundle.js"];n.forEach(function(e){var n=t.createElement("link");n.rel="stylesheet",n.href=e,(t.body||t.head).appendChild(n)}),r.forEach(function(e){var n=t.createElement("script");n.setAttribute("defer",!0),n.setAttribute("async",!1),n.src=e,(t.body||t.head).appendChild(n)})}(),e.streethawk=e.Pointzi=e.Contextual=e.streethawk||{ready:function(t){var n=0,r=setInterval(function(){if(e.streethawk.register||1200==n)return clearInterval(r),void(1200==n?console.error("Time out! Contextual sdk not loaded."):"function"==typeof t&&t());n++},100)}}}(window,document);
-</script>
-<script>
-  let cuid = localStorage.getItem('cuid');
-  if(!cuid){
-    cuid = prompt('Please input CUID');
-  }
-
-  if(cuid){
-    localStorage.setItem('cuid', cuid);
-    window.Contextual.ready(()=>{
-      window.Contextual.register('PZDynamic_bison', cuid);
-    })
-  }else{
-    alert("CUID is required");
-  }
+  !function(e,t){!function(){var e="http://sdks-george.contextu.al/web/",n=[e+"styles.css"],o=[e+"main.js"];n.forEach(function(e){var n=t.createElement("link");n.rel="stylesheet",n.href=e,(t.body||t.head).appendChild(n)}),o.forEach(function(e){var n=t.createElement("script");n.setAttribute("defer",!0),n.setAttribute("async",!1),n.src=e,(t.body||t.head).appendChild(n)})}(),e.Contextual=e.Contextual||{ready:function(t){var n=0,o=setInterval(function(){if(e.Contextual.register||1200==n)return clearInterval(o),void(1200==n?console.error("Time out! Contextual sdk not loaded."):"function"==typeof t&&t());n++},100)}}}(window,document);
 </script>
 </body>
 </html>
