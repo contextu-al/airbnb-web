@@ -47,7 +47,23 @@
 <script src="%PUBLIC_URL%/pz-nps.es5.js"></script>
 <!--Integrate Contextual Web SDK-->
 <script>
-  !function(e,t){!function(){var e="http://sdks-george.contextu.al/web/",n=[e+"styles.css"],o=[e+"main.js"];n.forEach(function(e){var n=t.createElement("link");n.rel="stylesheet",n.href=e,(t.body||t.head).appendChild(n)}),o.forEach(function(e){var n=t.createElement("script");n.setAttribute("defer",!0),n.setAttribute("async",!1),n.src=e,(t.body||t.head).appendChild(n)})}(),e.Contextual=e.Contextual||{ready:function(t){var n=0,o=setInterval(function(){if(e.Contextual.register||1200==n)return clearInterval(o),void(1200==n?console.error("Time out! Contextual sdk not loaded."):"function"==typeof t&&t());n++},100)}}}(window,document);
+  !function(e,t){!function(){var e="http://sdks-devgeorge.contextu.al/web/",n=[e+"styles.css"],o=[e+"main.js"];n.forEach(function(e){var n=t.createElement("link");n.rel="stylesheet",n.href=e,(t.body||t.head).appendChild(n)}),o.forEach(function(e){var n=t.createElement("script");n.setAttribute("defer",!0),n.setAttribute("async",!1),n.src=e,(t.body||t.head).appendChild(n)})}(),e.Contextual=e.Contextual||{ready:function(t){var n=0,o=setInterval(function(){if(e.Contextual.register||1200==n)return clearInterval(o),void(1200==n?console.error("Time out! Contextual sdk not loaded."):"function"==typeof t&&t());n++},100)}}}(window,document);
+</script>
+<!--Init Contextual Web SDK-->
+<script>
+  let cuid = localStorage.getItem('cuid');
+  if(!cuid){
+    cuid = prompt('What is your first name?');
+  }
+
+  if(cuid){
+    localStorage.setItem('cuid', cuid);
+    window.Contextual.ready(()=>{
+      window.Contextual.register('PZDynamic_bison', cuid);
+    })
+  }else{
+    alert("CUID is required");
+  }
 </script>
 </body>
 </html>
