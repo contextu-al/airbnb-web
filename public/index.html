@@ -51,19 +51,9 @@
 </script>
 <!--Init Contextual Web SDK-->
 <script>
-  let cuid = localStorage.getItem('cuid');
-  if(!cuid){
-    cuid = prompt('What is your first name?');
-  }
-
-  if(cuid){
-    localStorage.setItem('cuid', cuid);
-    window.Contextual.ready(()=>{
-      window.Contextual.register('PZDynamic_bison', cuid);
-    })
-  }else{
-    alert("CUID is required");
-  }
+  window.Contextual.ready(()=>{
+    window.Contextual.register('PZDynamic_bison', 'test-guide-block');
+  })
 </script>
 </body>
 </html>
