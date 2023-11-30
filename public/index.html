@@ -51,9 +51,11 @@
 </script>
 <!--Init Contextual Web SDK-->
 <script>
-  window.Contextual.ready(()=>{
-    window.Contextual.register('PZDynamic_bison', 'test-guide-block');
-  })
+  if(location.pathname === '/'){
+    window.Contextual.ready(()=>{
+      window.Contextual.register('PZDynamic_bison', 'test-guide-block');
+    })
+  }
 </script>
 </body>
 </html>
