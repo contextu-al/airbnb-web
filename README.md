@@ -43,4 +43,4 @@ In this example, we show how to make a Fancy Announcement, just like the crazy o
 8. If you are still in Preview Mode (or when you run the App with the guide enabled), then you should see the Announcement will magically change to Fancy Announcement
 9. Change the Title and Content and buttons. Play around with it and see the results.
 10. Save the guide and show to your Product Team, once you release this version of the App they can launch Fancy Announcement to whoever they want, whenever they want.
->>>>>>> f4fa3130c015f93cda98fcfa49ca992c44bd75f6
+
