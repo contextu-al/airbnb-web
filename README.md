@@ -27,7 +27,7 @@ In this example, we show how to make a Fancy Announcement, just like the crazy o
 6. Click on the Contextual Creator (the Chrome extension) and create a guide:
  * Pick one of the “Standard” Contextual Announcement Templates.
  * Use this [video]( https://player.vimeo.com/video/733886063 "Web Guide Creation How-to") to see the steps
- * Preview the Announcement on your Phone - it should look similar to the template
+ * Preview the Announcement with the Creator - it should look similar to the template
 7. Now go to the Extensibility section (Extra JSON) in the sidebar and paste in the JSON as follows:
    
 `
