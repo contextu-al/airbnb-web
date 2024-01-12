@@ -39,7 +39,7 @@ const Tab1 = ({pushDown}) => {
             nps.addEventListener('afterRender', () => ctx.afterRender());
             nps.addEventListener('afterShow', () => ctx.afterShow());
             nps.addEventListener('selectFeedback', (e) =>
-                ctx.sendFeedback({...e.detail, extra_json: extra_json.extra_feedback})
+                ctx.sendFeedback({...e.detail, customJson: extra_json.extra_feedback})
             );
             nps.addEventListener('submit', (e) => (ctx.next(), nps.remove(), container.style.display='none'));
 
